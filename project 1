@@ -66,14 +66,16 @@ int main() {
 	bool b_5 = 'X';
 	cout << "b_5 = " << b_5 << " | тип: bool, размер: 1 б." << endl;
 
-	string s_1 = "Hello";
-	cout << "s_1 = " << s_1 << " | тип: string, размер: динамическое выделение." << endl;
-	string s_2 = "сфе";
-	cout << "s_2 = " << s_2 << " | тип: string, размер: динамическое выделение." << endl;
-	string s_3 = "cat";
-	cout << "s_3 = " << s_3 << " | тип: string, размер: динамическое выделение." << endl;
-	string s_4 = "Johnny";
-	cout << "s_4 = " << s_4 << " | тип: string, размер: динамическое выделение." << endl;
-	string s_5 = "Leon";
-	cout << "s_5 = " << s_5 << " | тип: string, размер: динамическое выделение." << endl;
+	string st_1 = "Hello";
+	cout << "st_1 = " << st_1 << " | тип: string, размер: динамическое выделение." << endl;
+	string st_2 = "сфе";
+	cout << "st_2 = " << st_2 << " | тип: string, размер: динамическое выделение." << endl;
+	string st_3 = "cat";
+	cout << "st_3 = " << st_3 << " | тип: string, размер: динамическое выделение." << endl;
+	string st_4 = "Johnny";
+	cout << "st_4 = " << st_4 << " | тип: string, размер: динамическое выделение." << endl;
+	string st_5 = "Leon";
+	cout << "st_5 = " << st_5 << " | тип: string, размер: динамическое выделение." << endl;
 
+return 0;
+}
