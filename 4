@@ -1,0 +1,101 @@
+#include <iostream>
+using namespace std;
+int main(){
+	setlocale(0, "");
+	cout << "Введите любое число: ";
+	int number;
+	cin >> number; //7
+
+	int counter = 1;
+	int answer;
+
+	cout << "Пример: " << number << " * " << counter << " = ?\nОтвет: ";
+	cin >> answer;
+
+	if (answer == number * counter) {
+		cout << "Правильно!\n";
+		counter = counter + 1;
+		cout << "Пример: " << number << " * " << counter << " = ?\nОтвет: ";
+		cin >> answer;
+		if (answer == number * counter) {
+			cout << "Правильно!\n";
+			counter = counter + 1;
+			cout << "Пример: " << number << " * " << counter << " = ?\nОтвет: ";
+			cin >> answer;
+			if (answer == number * counter) {
+				cout << "Правильно!\n";
+				counter = counter + 1;
+				cout << "Пример: " << number << " * " << counter << " = ?\nОтвет: ";
+				cin >> answer;
+				if (answer == number * counter) {
+					cout << "Правильно!\n";
+					counter = counter + 1;
+					cout << "Пример: " << number << " * " << counter << " = ?\nОтвет: ";
+					cin >> answer;
+					if (answer == number * counter) {
+						cout << "Правильно!\n";
+						counter = counter + 1;
+						cout << "Пример: " << number << " * " << counter << " = ?\nОтвет: ";
+						cin >> answer;
+						if (answer == number * counter) {
+							cout << "Правильно!\n";
+							counter = counter + 1;
+							cout << "Пример: " << number << " * " << counter << " = ?\nОтвет: ";
+							cin >> answer;
+							if (answer == number * counter) {
+								cout << "Правильно!\n";
+								counter = counter + 1;
+								cout << "Пример: " << number << " * " << counter << " = ?\nОтвет: ";
+								cin >> answer;
+								if (answer == number * counter) {
+									cout << "Правильно!\n";
+									counter = counter + 1;
+									cout << "Пример: " << number << " * " << counter << " = ?\nОтвет: ";
+									cin >> answer;
+									if (answer == number * counter) {
+										cout << "Правильно!\n";
+										counter = counter + 1;
+										cout << "Пример: " << number << " * " << counter << " = ?\nОтвет: ";
+										cin >> answer;
+										if (answer == number * counter) {
+											cout << "Все верно!" << endl;
+											return 0;
+
+										}
+										else {
+											cout << "Неправильно!";
+											return 0;
+										}
+									}
+								}
+								else {
+									cout << "Неправильно!";
+									return 0;
+								}
+							}
+							else {
+								cout << "Неправильно!";
+								return 0;
+							}
+						}
+						else {
+							cout << "Неправильно!";
+							return 0;
+						}
+					}
+					else {
+						cout << "Неправильно!";
+						return 0;
+					}
+				}
+			}
+			else {
+				cout << "Неправильно!";
+				return 0;
+			}
+		}
+		else {
+			cout << "Неправильно!";
+			return 0;
+		}
+	}
