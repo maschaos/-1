@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+
+	while (true) {
+		int number;
+		cout << "Введите число от 0 до 100..." << endl;
+		cin >> number;
+
+		if (number >= 0 and number <= 10) {
+			cout << "Число в диапазоне от 0 до 10." << endl;
+			break;
+
+		}
+		else if (number >= 11 and number <= 21) {
+			cout << "Число в диапазоне от 11 до 21." << endl;
+			break;
+		}
+		else if (number >= 21 and number <= 31) {
+			cout << "Число в диапазоне от 21 до 31." << endl;
+			break;
+		}
+		else if (number >= 31 and number <= 41) {
+			cout << "Число в диапазоне от 31 до 41." << endl;
+			break;
+		}
+		else if (number >= 41 and number <= 51) {
+			cout << "Число в диапазоне от 41 до 51." << endl;
+			break;
+		}
+		else if (number >= 51 and number <= 61) {
+			cout << "Число в диапазоне от 51 до 61." << endl;
+			break;
+		}
+		else if (number >= 61 and number <= 71) {
+			cout << "Число в диапазоне от 61 до 71." << endl;
+			break;
+		}
+		else if (number >= 71 and number <= 81) {
+			cout << "Число в диапазоне от 71 до 81." << endl;
+			break;
+		}
+		else if (number >= 81 and number <= 91) {
+			cout << "Число в диапазоне от 81 до 91." << endl;
+			break;
+		}
+		else if (number >= 91 and number <= 100) {
+			cout << "Число в диапазоне от 91 до 100." << endl;
+			break;
+		}
+		else if (number >= 100) {
+			cout << "Ошибка. Число больше 100." << endl;
+		}
+		else {
+			cout << "Ошибка. Число меньше 0." << endl;
+		}
+	}
+
+	return 0;
+}
