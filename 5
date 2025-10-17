@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	cout << "Добро пожаловать в калькулятор" << endl;
+	cout << "Введите число..." << endl;
+	float number1;
+	float number3;
+	int number2
+		float otvet;
+
+	cin >> number1;
+
+	while (true) {
+		cout << "Введите знак." << endl;
+		cout << "1.знак + " << endl;
+		cout << "2.знак - " << endl;
+		cout << "3.знак * " << endl;
+		cout << "4.знак / " << endl;
+		cout << "5.знак % " << endl;
+		cin >> number2;
+
+		if (number2 == 1) {
+			cout << number1 << "+" << endl;
+			cout << "Введите число." << endl;
+			cin >> number3;
+			cout << number1 << "+" << number3 << endl;
+			float otvet = number1 + number3;
+			cout << number1 << "+" << number3 << "=" << otvet << endl;
+			break;
+
+
+
+		}
+		if (number2 == 2) {
+			cout << number1 << "-" << endl;
+			cout << "Введите число." << endl;
+			cin >> number3;
+			cout << number1 << "-" << number3 << endl;
+			float otvet = number1 + number3;
+			cout << number1 << "-" << number3 << "=" << otvet << endl;
+			break;
+		}
+		if (number2 == 3) {
+			cout << number1 << "*" << endl;
+			cout << "Введите число." << endl;
+			cin >> number3;
+			cout << number1 << "*" << number3 << endl;
+			float otvet = number1 + number3;
+			cout << number1 << "*" << number3 << "=" << otvet << endl;
+			break;
+		}
+		if (number2 == 4) {
+			cout << number1 << "/" << endl;
+			cout << "Введите число." << endl;
+			cin >> number3;
+			cout << number1 << "/" << number3 << endl;
+			float otvet = number1 + number3;
+			cout << number1 << "/" << number3 << "=" << otvet << endl;
+			break;
+		}
+		if (number2 == 5) {
+			cout << number1 << "%" << endl;
+			cout << "Введите число." << endl;
+			cin >> number3;
+			cout << number1 << "%" << number3 << endl;
+			float otvet = number1 + number3;
+			cout << number1 << "%" << number3 << "=" << otvet << endl;
+			break;
+		}
+		else {
+			cout << "Ошибка ввода. Повторите попытку." << endl;
+		}
+	}
+	return 0;
+}
