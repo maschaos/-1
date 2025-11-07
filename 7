@@ -1,0 +1,129 @@
+#include <iostream>
+using namespace std;
+int main() {
+	while (true) {
+		int monthNumber;
+		string MonthNumber;
+		int dayNumber;
+		string monthName;
+		int daysInMonth;
+		cout << "Выберите месяц:" << endl;
+		cout << "1. Январь " << endl;
+		cout << "2. Февраль" << endl;
+		cout << "3. Март" << endl;
+		cout << "4. Апрель" << endl;
+		cout << "5. Май" << endl;
+		cout << "6. Июнь" << endl;
+		cout << "7. Июль" << endl;
+		cout << "8. Август" << endl;
+		cout << "9. Сентябрь" << endl;
+		cout << "10. Октябрь" << endl;
+		cout << "11. Ноябрь" << endl;
+		cout << "12. Декабрь" << endl;
+
+		cout << "Введите номер месяца";
+		cin >> monthNumber;
+
+		switch (monthNumber) {
+		case 1:
+			MonthNumber = "Январь";
+			daysInMonth = 31;
+			break;
+		case 2:
+			MonthNumber = "Февраль";
+			daysInMonth = 29;
+			break;
+		case 3:
+			MonthNumber = "Март";
+			daysInMonth = 31;
+			break;
+		case 4:
+			MonthNumber = "Апрель";
+			daysInMonth = 30;
+			break;
+		case 5:
+			MonthNumber = "Май";
+			daysInMonth = 31;
+			break;
+		case 6:
+			MonthNumber = "Июнь";
+			daysInMonth = 30;
+			break;
+		case 7:
+			MonthNumber = "Июль";
+			daysInMonth = 31;
+			break;
+		case 8:
+			MonthNumber = "Август";
+			daysInMonth = 31;
+			break;
+		case 9:
+			MonthNumber = "Сентябрь";
+			daysInMonth = 30;
+			break;
+		case 10:
+			MonthNumber = "Октябрь";
+			daysInMonth = 31;
+			break;
+		case 11:
+			MonthNumber = "Ноябрь";
+			daysInMonth = 30;
+			break;
+		case 12:
+			MonthNumber = "Декабрь";
+			daysInMonth = 31;
+			break;
+		default:
+			cout << "Некорректный номер месяца" << endl;
+			return 1;
+		}
+		cout << "Выбран месяц:" << monthName << endl;
+		cout << "Введите день месяца:";
+		cin >> dayNumber;
+		switch (dayNumber) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		case 31:
+			if (dayNumber <= daysInMonth) {
+				cout << "Календарь:" << dayNumber << " " << monthName << endl;
+			}
+			else
+			{
+				cout << "Такого дня не существует в " << monthName << endl;
+			}
+			break;
+		default:
+			cout << "Некорректный номер дня." << endl;
+			break;
+		}
+		return 0;
+	}
+}
