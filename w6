@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	int number;
+	int sum = 0;
+	int count = 0;
+	cout << "Введите последовательность чисел(0 для завершения): " << endl;
+	while (true) {
+		cout << "Введите число: ";
+		cin >> number;
+		if (number == 0) {
+			break;
+		}
+		sum += number;
+		count++;
+	}
+	if (count == 0) {
+		cout << "Не введено ни одного числа." << endl;
+	}
+	else
+	{
+		double average = static_cast<double>(sum) / count;
+		cout << "Сумма чисел: " << sum << endl;
+		cout << "Кол-во чисел: " << count << endl;
+		cout << "Среднее арифметическое: " << average << endl;
+	}
+	return 0;
+}
+
