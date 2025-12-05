@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+
+	int correctPassword = 12345;
+	int userInput;
+
+	do {
+		cout << "Введите пароль: ";
+
+			cin >> userInput;
+
+			if (userInput == correctPassword) {
+				cout << "Добро пожаловать!" << endl;
+			}
+			else {
+				cout << "Неверный пароль" << endl;
+			}
+	} while (userInput != correctPassword);
+
+	return 0;
+
+}
