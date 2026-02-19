@@ -1,0 +1,438 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+	int num;
+	bool z = 1;
+	int count;
+	int scale;
+	int variant;
+	char texture;
+	int i = 0;
+	int b = 0;
+	cout << "[+]Программа - 'Геометрические фигуры'" << endl << "[1]Линия" << endl << "[2]Квадрат" << endl << "[3]Прямоугольник" << endl << "[4]Треугольник" << endl << "[5]Решётка" << endl << "[6]Крестик" << endl << "[7]Плюс" << endl << "[8]Ромб" << endl << "[9]Змейка" << endl << "[10]Рекурсивный квадрат" << endl;
+	cout << "[+]Выберите фигуру: " << endl;
+	cin >> num;
+	while (num < 1 or num > 10) {
+		system("cls");
+		cout << "[+]Такой фигуры нет!" << endl << "[+]Выберите фигуру: " << endl;
+		cin >> num;
+	}
+	if (num == 1) {
+		cout << "[+]Фигура: 'Линия'" << endl << "[1]Горизонтальная" << endl << "[2]Вертикальная" << endl;
+		cin >> variant;
+		if (variant < 1 or variant > 2) {
+			cout << "[+]Неверный выбор линии!" << endl;
+			return 0;
+		}
+		if (variant == 1) {
+			cout << "[+]Введите длину линии: " << endl;
+			cin >> scale;
+			if (scale <= 0) {
+				cout << "[+]Невозможная длина линии!" << endl;
+				return 0;
+			}
+			cout << "[+]Введите текстуру линии: " << endl;
+			cin >> texture;
+			system("cls");
+			while (i < scale) {
+				cout << texture << " ";
+				i++;
+			}
+			return 0;
+		}
+		if (variant == 2) {
+			cout << "[+]Введите длину линии: " << endl;
+			cin >> scale;
+			if (scale <= 0) {
+				cout << "[+]Невозможная длина линии!" << endl;
+				return 0;
+			}
+			cout << "[+]Введите текстуру линии: " << endl;
+			cin >> texture;
+			system("cls");
+			while (i < scale) {
+				cout << texture << endl;
+				i++;
+			}
+			return 0;
+		}
+	}
+	if (num == 2) {
+		cout << "[+]Фигура: 'Квадрат'\n" << "[1]Заполненный\n[2]Пустой" << endl;
+		cin >> variant;
+		if (variant == 1) {
+			cout << "[+]Введите длину стороны квадрата: " << endl;
+			cin >> scale;
+			if (scale <= 0) {
+				cout << "[+]Невозможная длина квадрата!" << endl;
+				return 0;
+			}
+			cout << "[+]Введите текстуру квадрата: " << endl;
+			cin >> texture;
+			system("cls");
+			while (i < scale) {
+				while (b < scale) {
+					cout << texture << " ";
+					b++;
+
+				}
+				b = 0;
+				cout << endl;
+				i++;
+			}
+			return 0;
+		}
+		if (variant == 2) {
+			cout << "[+]Введите длину стороны квадрата: " << endl;
+			cin >> scale;
+			if (scale <= 0) {
+				cout << "[+]Невозможная длина квадрата!" << endl;
+				return 0;
+			}
+			cout << "[+]Введите текстуру квадрата: " << endl;
+			cin >> texture;
+			system("cls");
+			for (int mul = 0; mul < scale; mul++) {
+				if (mul == 0 or mul == scale - 1) {
+					for (int lum = 0; lum < scale; lum++) {
+						cout << texture << " ";
+					}
+					cout << endl;
+				}
+				else {
+					for (int lum = 0; lum < scale; lum++) {
+						if (lum == 0 or lum == scale - 1) {
+							cout << texture << " ";
+						}
+						else {
+							cout << " " << " ";
+						}
+
+					}
+					cout << endl;
+				}
+
+			}
+
+		}
+		return 0;
+	}
+	if (num == 3) {
+		cout << "[+]Фигура: 'Прямоугольник'\n" << "[1]Заполненный\n[2]Пустой" << endl;
+		cin >> variant;
+		if (variant == 1) {
+			cout << "[+]Введите ширину: " << endl;
+			int shirina;
+			cin >> shirina;
+			if (shirina <= 0) {
+				cout << "[+]Невозможная ширина!" << endl;
+				return 0;
+			}
+			int visota;
+			cout << "[+]Введите высоту: " << endl;
+			cin >> visota;
+			if (visota <= 0) {
+				cout << "[+]Невозможная высота!" << endl;
+				return 0;
+			}
+			cout << "[+]Введите текстуру квадрата: " << endl;
+			cin >> texture;
+			system("cls");
+			for (int mul = 0; mul < visota; mul++) {
+				for (int lum = 0; lum < shirina; lum++) {
+					cout << texture << " ";
+				}
+				cout << endl;
+			}
+			return 0;
+		}
+		if (variant == 2) {
+			cout << "[+]Введите ширину: " << endl;
+			int shirina;
+			cin >> shirina;
+			if (shirina <= 0) {
+				cout << "[+]Невозможная ширина!" << endl;
+				return 0;
+			}
+			int visota;
+			cout << "[+]Введите высоту: " << endl;
+			cin >> visota;
+			if (visota <= 0) {
+				cout << "[+]Невозможная высота!" << endl;
+				return 0;
+			}
+			cout << "[+]Введите текстуру квадрата: " << endl;
+			cin >> texture;
+			system("cls");
+			for (int mul = 0; mul < visota; mul++) {
+				if (mul == 0 or mul == visota - 1) {
+					for (int lum = 0; lum < shirina; lum++) {
+						cout << texture << " ";
+					}
+					cout << endl;
+				}
+				else {
+					for (int lum = 0; lum < shirina; lum++) {
+						if (lum == 0 or lum == shirina - 1) {
+							cout << texture << " ";
+						}
+						else {
+							cout << " " << " ";
+						}
+
+					}
+					cout << endl;
+				}
+
+			}
+		}
+	}
+	if (num == 4) {
+		cout << "[+]Фигура: 'Треугольник'\n" << "[1]Заполненный\n[2]Пустой" << endl;
+		cin >> variant;
+		if (variant == 1) {
+			int visota;
+			cout << "[+]Введите высоту: " << endl;
+			cin >> visota;
+			if (visota <= 0) {
+				cout << "[+]Невозможная высота!" << endl;
+				return 0;
+			}
+			cout << "[+]Введите текстуру треугольника: " << endl;
+			cin >> texture;
+			system("cls");
+			for (int i = 1; i <= visota; ++i) {
+				for (int j = 0; j < visota - i; ++j) {
+					cout << " ";
+				}
+				for (int j = 1; j <= 2 * i - 1; ++j) {
+					cout << texture;
+				}
+				cout << endl;
+			}
+		}
+		if (variant == 2) {
+			int visota;
+			cout << "[+]Введите высоту: " << endl;
+			cin >> visota;
+			if (visota <= 0) {
+				cout << "[+]Невозможная высота!" << endl;
+				return 0;
+			}
+			cout << "[+]Введите текстуру треугольника: " << endl;
+			cin >> texture;
+			system("cls");
+			for (int i = 1; i <= visota; ++i) {
+				for (int j = 0; j < visota - i; ++j) {
+					cout << " ";
+				}
+				for (int j = 1; j <= 2 * i - 1; ++j) {
+					if (i == 1 || i == visota || j == 1 || j == (2 * i - 1)) {
+						cout << texture;
+					}
+					else {
+						cout << " ";
+					}
+				}
+				cout << endl;
+			}
+		}
+		return 0;
+
+	}
+	if (num == 5) {
+		cout << "[+]Фигура: 'Решётка'" << endl;
+		int x;
+		cout << "[+]Введите размер: " << endl;
+		cin >> x;
+		if (x <= 0) {
+			cout << "[+]Невозможная высота!" << endl;
+			return 0;
+		}
+		if (x % 2 == 0)
+			x = x + 1;
+		int y = x;
+		cout << "[+]Введите текстуру решётки: " << endl;
+		cin >> texture;
+		system("cls");
+		for (int i = 1; i <= y; i++) {
+			for (int j = 1; j <= x; j++) {
+				if (i == 1 or i % 2 != 0) {
+					if (j == 1 or j % 2 != 0) {
+						cout << " .";
+					}
+					else {
+						cout << " " << texture;
+					}
+				}
+				else {
+					cout << " " << texture;
+				}
+			}
+			cout << endl;
+
+		}
+	}
+	if (num == 6) {
+		cout << "[+]Фигура: 'Крестик'" << endl;
+		int x;
+		cout << "[+]Введите размер: " << endl;
+		cin >> x;
+		if (x <= 0) {
+			cout << "[+]Невозможная высота!" << endl;
+			return 0;
+		}
+		if (x % 2 == 0)
+			x = x + 1;
+		cout << "[+]Введите текстуру крестика: " << endl;
+		cin >> texture;
+		system("cls");
+		for (int i = 1; i <= x; i++) {
+			for (int j = 1; j <= x; j++) {
+				if (j == i || j == x - i + 1) {
+					cout << texture << " ";
+				}
+				else {
+					cout << ". ";
+				}
+			}
+			cout << endl;
+		}
+		return 0;
+	}
+	if (num == 7) {
+		cout << "[+]Фигура: 'Плюс'" << endl;
+		int x;
+		cout << "[+]Введите размер: " << endl;
+		cin >> x;
+		if (x <= 0) {
+			cout << "[+]Невозможная высота!" << endl;
+			return 0;
+		}
+		if (x % 2 == 0)
+			x = x + 1;
+		cout << "[+]Введите текстуру плюса: " << endl;
+		cin >> texture;
+		system("cls");
+		for (int i = 1; i <= x; i++) {
+			for (int j = 1; j <= x; j++) {
+				if (j == x / 2 + 1 || i == x / 2 + 1) {
+					cout << texture << " ";
+				}
+				else {
+					cout << ". ";
+				}
+			}
+			cout << endl;
+		}
+		return 0;
+	}
+	if (num == 8) {
+		cout << "[+]Фигура: 'Ромб'" << endl;
+		int x;
+		cout << "[+]Введите размер: " << endl;
+		cin >> x;
+		if (x <= 0) {
+			cout << "[+]Невозможный размер!" << endl;
+			return 0;
+		}
+		if (x % 2 == 0)
+			x = x + 1;
+		cout << "[+]Введите текстуру ромба: " << endl;
+		cin >> texture;
+		system("cls");
+		for (int i = 1; i <= x; i++) {
+			for (int j = 1; j <= x; j++) {
+				if (j == x / 2 + 2 - i || j == x / 2 + i || i > x / 2 and j == i - x / 2 || i > x / 2 and j == x - i + x / 2 + 1) {
+					cout << texture << " ";
+				}
+				else {
+					cout << ". ";
+				}
+			}
+			cout << endl;
+		}
+		return 0;
+	}
+	if (num == 9) {
+		cout << "[+]Фигура: 'Змейка'" << endl;
+		int x;
+		cout << "[+]Введите размер: " << endl;
+		cin >> x;
+		if (x <= 0) {
+			cout << "[+]Невозможный размер!" << endl;
+			return 0;
+		}
+		if (x % 2 == 0)
+			x = x + 1;
+		cout << "[+]Введите текстуру змейки: " << endl;
+		cin >> texture;
+		system("cls");
+		for (int i = 1; i <= x; i++) {
+			for (int j = 1; j <= x; j++) {
+				if (i % 2 != 0) {
+					cout << texture << " ";
+				}
+				else if (z == 1 and j == x) {
+					cout << texture << " ";
+				}
+				else if (z == 0 and j == 1) {
+					cout << texture << " ";
+				}
+				else {
+					cout << ". ";
+				}
+			}
+			if (z == 1 and i % 2 == 0) {
+				z = 0;
+			}
+			else if (z == 0 and i % 2 == 0) {
+				z = 1;
+			}
+			cout << endl;
+		}
+		return 0;
+	}
+	if (num == 10) {
+		cout << "[+]Фигура: 'Рекурсивный квадрат'" << endl;
+		int x;
+		cout << "[+]Введите размер: " << endl;
+		cin >> x;
+		if (x <= 0) {
+			cout << "[+]Невозможный размер!" << endl;
+			return 0;
+		}
+		cout << "[+]Введите текстуру квадрат: " << endl;
+		cin >> texture;
+		system("cls");
+		for (int i = 0; i <= x; i++) {
+			for (int j = 0; j <= x; j++) {
+				if (i == 0 || i == x || j == 0 || j == x) {
+					cout << texture << " ";
+				}
+				else if (i % 2 == 0 and j >= i and j <= x - i) {
+					cout << texture << " ";
+				}
+				else if (j % 2 == 0 and i >= j and i <= x - j) {
+					cout << texture << " ";
+				}
+				else if (i % 2 == 0 and j >= x - i and j <= i) {
+					cout << texture << " ";
+				}
+				else if (j % 2 == 0 and i >= x - j and i <= j) {
+					cout << texture << " ";
+				}
+				else {
+					cout << ". ";
+				}
+			}
+			cout << endl;
+
+			
+		}
+	}
+	return 0;
+}
