@@ -1,0 +1,97 @@
+#include <iostream>
+#include <array>
+#include <cstdlib>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "");
+	int array[7];
+	int choise;
+	int b;
+	int c;
+	for (int i = 0; i < 7; i++) {
+		cout << "[+] Инициализация | ячейка " << i << ": ";
+		cin >> array[i];
+	}
+	while (true) {
+		system("cls");
+		cout << "[+] Настройки массива:\n[1] Сортировка по возрастанию\n[2] Сортировка по убыванию\n[3] Перемножить массив\n[4] Сложить массив\n[5] Разделить массив\n[6] Обнулить массив\n\n[9] Задать новые значения массиву[+]\nВвод:";
+		cin >> choise;
+		switch (choise) {
+		case 1:
+			system("cls");
+			cout << "[1] Сортировка по возрастанию" << endl;
+			sort(array, array + 7);
+			for (int i = 0; i < 7; i++) {
+				cout << array[i] << ", ";
+			}
+			break;
+		case 2:
+			system("cls");
+			cout << "[2] Сортировка по убыванию" << endl;
+			sort(array, array + 7);
+			for (int i = 6; i >= 0; i--) {
+				cout << array[i] << ", ";
+			}
+			break;
+		case 3:
+			system("cls");
+			cout << "[3] Перемножить массив" << endl;
+			cout << "Введите число, на которое нужно перемножить массив:";
+			cin >> b;
+			for (int i = 0; i < 7; i++) {
+				array[i] = array[i] * b;
+			}
+			for (int i = 0; i < 7; i++) {
+				cout << array[i] << ", ";
+			}
+			break;
+		case 4:
+			system("cls");
+			cout << "[4] Сложить массив" << endl;
+			cout << "Введите число, с которым нужно сложить массив:";
+			cin >> b;
+			for (int i = 0; i < 7; i++) {
+				array[i] = array[i] + b;
+			}
+			for (int i = 0; i < 7; i++) {
+				cout << array[i] << ", ";
+			}
+			break;
+		case 5:
+			system("cls");
+			cout << "[5] Разделить массив" << endl;
+			cout << "Введите число, на которое нужно разделить массив:";
+			cin >> b;
+			for (int i = 0; i < 7; i++) {
+				array[i] = array[i] / b;
+			}
+			for (int i = 0; i < 7; i++) {
+				cout << array[i] << ", ";
+			}
+			break;
+		case 6:
+			system("cls");
+			cout << "[6] Обнуление массива" << endl;
+			for (int i = 0; i < 7; i++) {
+				array[i] = 0;
+			}
+			break;
+		case 9:
+			system("cls");
+			cout << "[9] Задать новые значения массиву" << endl;
+			for (int i = 0; i < 7; i++) {
+				cout << "[+] Инициализация | ячейка " << i << ": ";
+				cin >> array[i];
+			}
+			for (int i = 0; i < 7; i++) {
+				cout << array[i] << ", ";
+			}
+			break;
+
+		}
+		cin >> c;
+	}
+}
